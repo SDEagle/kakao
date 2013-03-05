@@ -20,3 +20,6 @@
 
 # Ignore gedit tmp files
 *~
+
+# Ignore Rubymine files
+/.idea
