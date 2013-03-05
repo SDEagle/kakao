@@ -24,4 +24,10 @@ Kakao::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  # Open E-Mails in Browser
+  config.action_mailer.delivery_method = :letter_opener
+
+  # Raise exception on illegal mass assignment
+  config.action_controller.action_on_unpermitted_parameters = :raise
 end
