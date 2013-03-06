@@ -31,5 +31,14 @@ group :development do
   gem 'binding_of_caller'
 end
 
+# Testing
+group :test, :development do
+  gem 'rspec-rails', '~> 2.0' # dev for generators being available
+  gem 'guard-rspec'
+end
+group :test do
+  gem 'factory_girl_rails'
+end
+
 # Additional dependencies
 # A JS Runtime - node.js i.e.
