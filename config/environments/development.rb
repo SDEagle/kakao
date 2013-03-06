@@ -30,4 +30,9 @@ Kakao::Application.configure do
 
   # Raise exception on illegal mass assignment
   config.action_controller.action_on_unpermitted_parameters = :raise
+
+  console do
+    require 'pry'
+    config.console = Pry
+  end
 end

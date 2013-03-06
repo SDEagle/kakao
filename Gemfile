@@ -29,6 +29,8 @@ group :development do
   # Error displaying
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  gem 'pry' # guard requires it anyway, so why not :-)
 end
 
 # Testing
