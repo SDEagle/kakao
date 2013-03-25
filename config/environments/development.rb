@@ -35,4 +35,6 @@ Kakao::Application.configure do
     require 'pry'
     config.console = Pry
   end
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
