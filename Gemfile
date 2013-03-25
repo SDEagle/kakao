@@ -11,6 +11,9 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
 
   gem 'uglifier', '>= 1.0.3'
+
+  # Until there we get to some design...
+  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'
@@ -44,3 +47,4 @@ end
 
 # Additional dependencies
 # A JS Runtime - node.js i.e.
+# PostgreSQL Server (and libpq-dev)
