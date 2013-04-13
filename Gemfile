@@ -46,6 +46,7 @@ end
 group :test, :development do
   gem 'rspec-rails', '~> 2.0' # dev for generators being available
   gem 'guard-rspec'
+  gem 'rb-inotify', '~> 0.9' # guard performance
 end
 group :test do
   gem 'factory_girl_rails'
