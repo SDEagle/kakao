@@ -50,6 +50,7 @@ group :test, :development do
 end
 group :test do
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 # Additional dependencies

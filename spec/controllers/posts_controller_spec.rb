@@ -63,4 +63,16 @@ describe PostsController do
       end
     end
   end
+
+  describe 'GET index' do
+    it 'should filter by tag param' do
+      p1 = create :post
+      p1.tag_list = 'foobar'
+      p1.save
+      p2 = create :post
+      sign_in User.first
+      get :index, tag: p1.tags[0].id
+      assigns(:posts).should == [p1]
+    end
+  end
 end

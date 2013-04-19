@@ -4,7 +4,11 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    if params[:tag]
+      @posts = Tag.find(params[:tag]).posts
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1
