@@ -68,10 +68,6 @@ Kakao::Application.configure do
   # TODO mailing host for devise
   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation can not be found).
-  config.i18n.fallbacks = true
-
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 

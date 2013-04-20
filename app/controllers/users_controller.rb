@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: tm('flash.success.create', User)
     else
       render action: 'edit'
     end

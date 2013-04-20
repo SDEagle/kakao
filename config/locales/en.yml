@@ -20,4 +20,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  back: Back
+  confirm: Are you sure?
+  destroy: Destroy
+  edit: Edit
+  show: Show
+  editing: 'Editing %{model}'
+  listing: 'Listing %{model}'
+  new: 'New %{model}'
+  flash:
+    success:
+      create: '%{model} was successfully created.'
+      update: '%{model} was successfully updated.'
 
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+      post:
+        one: Post
+        other: Posts
+
+    attributes:
+      post:
+        tag_list: Tags

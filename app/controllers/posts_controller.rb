@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post.user = current_user
 
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
+      redirect_to @post, notice: tm('flash.success.create', Post)
     else
       render action: 'new'
     end
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
-      redirect_to @post, notice: 'Post was successfully updated.'
+      redirect_to @post, notice: tm('flash.success.update', Post)
     else
       render action: 'edit'
     end

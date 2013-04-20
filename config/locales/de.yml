@@ -1,0 +1,22 @@
+de:
+  back: Zurück
+  confirm: Bist du dir sicher?
+  destroy: Löschen
+  edit: Bearbeiten
+  show: Anzeigen
+  editing: '%{model} bearbeiten'
+  listing: '%{model} auflisten'
+  new: '%{model} erstellen'
+  flash:
+    success:
+      create: '%{model} wurde erfolgreich erstellt.'
+      update: '%{model} wurde erfolgreich bearbeitet.'
+
+  activerecord:
+    models:
+      user:
+        one: Benutzer
+        other: Benutzer
+      post:
+        one: Post
+        other: Posts
