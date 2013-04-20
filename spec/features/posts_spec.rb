@@ -14,6 +14,16 @@ describe 'Posts' do
       page.should have_content 'foo'
       page.should have_content @user.name
     end
+
+    it 'should filter posts by tag' do
+      create :post, text: 'sinnvoll', tag_list: 'text'
+      create :post, text: 'sinnlos', tag_list: 'sinnlos'
+      login @user
+      visit posts_path
+      click_link '#text'
+      page.should have_content 'sinnvoll'
+      page.should_not have_content 'sinnlos'
+    end
   end
 
   describe 'POST /posts' do
