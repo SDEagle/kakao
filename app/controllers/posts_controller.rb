@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all
     end
+    @posts.includes(:tags)
   end
 
   # GET /posts/1
