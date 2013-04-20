@@ -16,7 +16,7 @@ describe PostsController do
     end
 
     it "routes to #edit" do
-      get("/posts/1/edit").should route_to("posts#edit", :id => "1")
+      get("/posts/1/edit").should_not be_routable
     end
 
     it "routes to #create" do
@@ -24,7 +24,7 @@ describe PostsController do
     end
 
     it "routes to #update" do
-      put("/posts/1").should route_to("posts#update", :id => "1")
+      put("/posts/1").should_not be_routable
     end
 
     it "routes to #destroy" do
