@@ -69,7 +69,7 @@ describe PostsController do
       p1 = create :post
       p1.tag_list = 'foobar'
       p1.save
-      p2 = create :post
+      create :post
       sign_in User.first
       get :index, tag: p1.tags[0].id
       assigns(:posts).should == [p1]

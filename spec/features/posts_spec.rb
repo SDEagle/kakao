@@ -9,8 +9,10 @@ describe 'Posts' do
     it 'should display posts' do
       login @user
       Post.create(user: @user, text: 'foo')
+      login create(:user)
       visit posts_path
       page.should have_content 'foo'
+      page.should have_content @user.name
     end
   end
 
@@ -20,10 +22,10 @@ describe 'Posts' do
       visit new_post_path
       fill_in 'Text', with: 'foo'
       fill_in 'Tags', with: 'bar, nothing'
-      click_link 'Create'
+      click_on 'Create Post'
       page.should have_content 'foo'
-      page.should have_content 'bar'
-      page.should have_content 'nothing'
+      page.should have_content '#bar'
+      page.should have_content '#nothing'
     end
   end
 end

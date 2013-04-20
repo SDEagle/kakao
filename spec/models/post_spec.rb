@@ -16,4 +16,11 @@ describe Post do
     tag_list.should include 'foo'
     tag_list.should include 'bar'
   end
+
+  it 'should have a tag list' do
+    post = Post.new
+    post.tag_list = 'foo, bar'
+    post.tag_list.should include 'foo'
+    post.tag_list.should include 'bar'
+  end
 end
