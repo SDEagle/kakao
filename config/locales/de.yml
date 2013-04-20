@@ -20,3 +20,7 @@ de:
       post:
         one: Post
         other: Posts
+
+  user:
+     flash:
+       illegal_update: Du kannst nur dein eigenes Profil verändern

@@ -45,3 +45,7 @@ en:
     attributes:
       post:
         tag_list: Tags
+
+  user:
+    flash:
+      illegal_update: You cannot update an other user's profile

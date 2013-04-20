@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     unless current_user.id.to_s == params[:id]
-      redirect_to edit_user_path(current_user), flash: { error: 'fooo' }
+      redirect_to edit_user_path(current_user), flash: { error: t('user.flash.illegal_update') }
       return
     end
 
