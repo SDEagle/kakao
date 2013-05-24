@@ -1,20 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0.beta1'
+gem 'rails', '4.0.0.rc1'
 
 # PostgreSQL als DB
 gem 'pg'
 
-# Gems used only for assets and not required in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
+gem 'sass-rails',   '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
 
-  gem 'uglifier', '>= 1.0.3'
+gem 'uglifier', '>= 1.3.0'
 
-  # Until there we get to some design...
-  gem 'bootstrap-sass'
-end
+# Until there we get to some design...
+gem 'bootstrap-sass'
 
 gem 'jquery-rails'
 
@@ -30,6 +27,10 @@ gem 'devise', github: 'idl3/devise', branch: 'rails4'
 # Simplifying forms (also bootstrap support)
 gem 'simple_form', github: 'plataformatec/simple_form'
 
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
 
 group :development do
   # Opening E-Mails in Browser
