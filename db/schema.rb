@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130413204656) do
+ActiveRecord::Schema.define(version: 20130525103704) do
 
   create_table "posts", force: true do |t|
     t.text     "text"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20130413204656) do
   add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
 
   create_table "tags", force: true do |t|
-    t.string   "tag"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
