@@ -48,12 +48,16 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0' # dev for generators being available
   gem 'guard-rspec'
   gem 'rb-inotify', '~> 0.9' # guard performance
+  gem 'jasminerice', :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'guard-jasmine'
 end
 group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'poltergeist'
 end
 
 # Additional dependencies
 # A JS Runtime - node.js i.e.
 # PostgreSQL Server (and libpq-dev)
+# PhantomJS >= 1.8.1 (ubuntu package is at 1.6.0) for js testing without browser
