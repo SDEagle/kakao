@@ -5,7 +5,7 @@ describe 'Posts' do
     @user = create :user
   end
 
-  describe 'GET /posts' do
+  describe 'posts index' do
     it 'should display posts' do
       login @user
       Post.create(user: @user, text: 'foo')
@@ -26,8 +26,8 @@ describe 'Posts' do
     end
   end
 
-  describe 'POST /posts' do
-    it 'should display added tags' do
+  describe 'post creation' do
+    it 'should save tags' do
       login @user
       visit new_post_path
       fill_in 'Text', with: 'foo'
@@ -36,6 +36,14 @@ describe 'Posts' do
       page.should have_content 'foo'
       page.should have_content '#bar'
       page.should have_content '#nothing'
+    end
+
+    it 'should autocomplete tags', js: true do
+      Tag.create!(name: 'discussion')
+      login @user
+      visit new_post_path
+      fill_in 'Text', with: "'i don't agree #dis"
+      page.should have_content 'discussion'
     end
   end
 end

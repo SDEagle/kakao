@@ -1,4 +1,5 @@
 Kakao::Application.routes.draw do
+  get "search/tags"
   resources :posts, except: [:edit, :update]
 
   devise_for :users
@@ -13,6 +14,7 @@ Kakao::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'search/tags' => 'search#tags'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
