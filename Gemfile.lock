@@ -18,8 +18,8 @@ GIT
       activemodel (>= 4.0.0.rc1, < 4.1)
 
 GIT
-  remote: https://github.com/bradphelan/jasminerice.git
-  revision: b5370e3cf2931aa5478e775369afb5ecef1c18b5
+  remote: https://github.com/SDEagle/jasminerice.git
+  revision: 461d9057a72685d2af978ba77a910676ff858cf8
   specs:
     jasminerice (0.1.0)
       coffee-rails

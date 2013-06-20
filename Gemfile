@@ -49,7 +49,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0' # dev for generators being available
   gem 'guard-rspec'
   gem 'rb-inotify', '~> 0.9' # guard performance
-  gem 'jasminerice', :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'jasminerice', :git => 'https://github.com/SDEagle/jasminerice.git'
   gem 'guard-jasmine'
 end
 group :test do

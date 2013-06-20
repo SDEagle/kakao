@@ -38,6 +38,9 @@ describe 'Posts' do
       page.should have_content '#nothing'
     end
 
+    #http://splinter.cobrateam.info/docs/drivers/phantomjs.html
+    #https://github.com/jonleighton/poltergeist/issues/43
+    #https://github.com/jonleighton/poltergeist/pull/54
     it 'should autocomplete tags', js: true do
       Tag.create!(name: 'discussion')
       login @user
