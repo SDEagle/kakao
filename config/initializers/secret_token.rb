@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
+# TODO different key for production
 Kakao::Application.config.secret_key_base = 'a330a2b08fa72bff30b1c50e6fff8c86b6e13216f7db05ea662184757ca5db1364b2fbff8a69aeab9d4d926ea7aebbc52d3472038e3acbba5b22457cae16e03a'

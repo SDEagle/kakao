@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '~> 4.0.0'
 
 # PostgreSQL als DB
 gem 'pg'
@@ -22,10 +22,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 # Authentication with Devise
-gem 'devise', github: 'idl3/devise', branch: 'rails4'
+gem 'devise'
 
 # Simplifying forms (also bootstrap support)
-gem 'simple_form', github: 'plataformatec/simple_form'
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
