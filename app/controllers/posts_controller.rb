@@ -29,8 +29,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
+    extractor = TagExtractor.new @post
 
-    if @post.save
+    if extractor.save
       redirect_to @post, notice: tm('flash.success.create', Post)
     else
       render action: 'new'

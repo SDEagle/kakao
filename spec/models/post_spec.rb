@@ -8,19 +8,4 @@ describe Post do
   it 'should need a user' do
     Post.new(text: 'foobar').valid?.should be_false
   end
-
-  it 'should create new tags' do
-    post = Post.new
-    post.tag_list = 'foo, bar'
-    tag_list = post.tags.map(&:name)
-    tag_list.should include 'foo'
-    tag_list.should include 'bar'
-  end
-
-  it 'should have a tag list' do
-    post = Post.new
-    post.tag_list = 'foo, bar'
-    post.tag_list.should include 'foo'
-    post.tag_list.should include 'bar'
-  end
 end

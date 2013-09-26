@@ -47,7 +47,7 @@ describe PostsController do
   describe 'GET index' do
     it 'should filter by tag param' do
       p1 = create :post
-      p1.tag_list = 'foobar'
+      p1.tags << Tag.create!(name: 'foobar')
       p1.save
       create :post
       sign_in User.first

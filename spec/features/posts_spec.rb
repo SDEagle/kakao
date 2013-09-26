@@ -16,8 +16,8 @@ describe 'Posts' do
     end
 
     it 'should filter posts by tag' do
-      create :post, text: 'sinnvoll', tag_list: 'text'
-      create :post, text: 'sinnlos', tag_list: 'sinnlos'
+      create :post, text: 'sinnvoll', tags: [Tag.create!(name: 'text')]
+      create :post, text: 'sinnlos', tags: [Tag.create!(name: 'sinnlos')]
       login @user
       visit posts_path
       click_link '#text'
@@ -30,12 +30,11 @@ describe 'Posts' do
     it 'should display added tags' do
       login @user
       visit new_post_path
-      fill_in 'Text', with: 'foo'
-      fill_in 'Tags', with: 'bar, nothing'
+      fill_in 'Text', with: 'foo #bar #nothing'
       click_on 'Create Post'
       page.should have_content 'foo'
-      page.should have_content '#bar'
-      page.should have_content '#nothing'
+      page.should have_link '#bar'
+      page.should have_link '#nothing'
     end
   end
 end
