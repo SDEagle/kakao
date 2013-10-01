@@ -3,6 +3,6 @@ class Tag < ActiveRecord::Base
   has_many :posts, through: :taggings
 
   def self.reduce tag_name
-    tag_name.gsub(/\p{^Alnum}/, '')
+    tag_name.gsub(/[^[:alnum:]]/, '')
   end
 end
