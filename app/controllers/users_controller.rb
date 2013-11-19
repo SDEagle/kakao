@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  skip_before_filter :authenticate_user!, only: [:index]
 
   # TODO remove index and introduce admin interface
   # GET /users
