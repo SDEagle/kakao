@@ -26,3 +26,6 @@
 
 # Ignore generated docs
 /doc
+
+# Everybody may maintain his own gemset
+.ruby-gemset
