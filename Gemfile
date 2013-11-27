@@ -63,4 +63,4 @@ ruby '2.0.0'
 # Additional dependencies
 # A JS Runtime - node.js i.e.
 # PostgreSQL Server (and libpq-dev)
-# PhantomJS >= 1.8.1 (ubuntu package is at 1.6.0) for js testing without browser
+# PhantomJS >= 1.8.1 (ubuntu 13.04 package is at 1.6.0 - ubuntu >= 13.10 has 1.9 which is fine) for js testing without browser
