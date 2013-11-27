@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Until there we get to some design...
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.3.2'
 
 gem 'jquery-rails'
 
@@ -26,6 +26,8 @@ gem 'devise'
 
 # Simplifying forms (also bootstrap support)
 gem 'simple_form'
+
+gem 'select2-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -57,6 +59,7 @@ group :test do
   gem 'poltergeist'
 end
 
+ruby '2.0.0'
 # Additional dependencies
 # A JS Runtime - node.js i.e.
 # PostgreSQL Server (and libpq-dev)

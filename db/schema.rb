@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130525103704) do
+ActiveRecord::Schema.define(version: 20131001100235) do
+
+  create_table "addressings", force: true do |t|
+    t.integer  "post_id"
+    t.integer  "receiver_id"
+    t.string   "receiver_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "addressings", ["post_id"], name: "index_addressings_on_post_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.text     "text"
