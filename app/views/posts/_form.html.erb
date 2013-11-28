@@ -1,12 +1,8 @@
 <%= simple_form_for(@post) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.hidden_field :serialized_recipient_ids %>
-    <%= f.input :text %>
-  </div>
+  <%= f.hidden_field :serialized_recipient_ids %>
+  <%= f.input :text %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit %>
 <% end %>

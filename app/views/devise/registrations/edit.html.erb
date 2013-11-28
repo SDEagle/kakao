@@ -4,16 +4,12 @@
     <%= devise_error_messages! %>
 
 
-    <div class="form-inputs">
-      <%= f.input :email %>
-      <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>
-      <%= f.input :password_confirmation %>
-      <%= f.input :current_password, hint: t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>
-    </div>
+    <%= f.input :email %>
+    <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>
+    <%= f.input :password_confirmation %>
+    <%= f.input :current_password, hint: t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>
 
-    <div class="form-actions">
-      <%= f.button :submit, t('.update', :default => 'Update') %>
-    </div>
+    <%= f.button :submit, t('.update', :default => 'Update') %>
 <% end %>
 
 <h3><%= t('.cancel_my_account', :default => 'Cancel my account') %></h3>
