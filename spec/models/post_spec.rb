@@ -9,21 +9,21 @@ describe Post do
     Post.new(text: 'foobar').valid?.should be_false
   end
 
-  describe '#receiver_ids=' do
+  describe '#recipient_ids=' do
     it 'delegates to the different types' do
       p = Post.new
-      expect(p).to receive(:user_receiver_ids=).with([5])
-      expect(p).to receive(:group_receiver_ids=).with([42])
-      p.receiver_ids = [{'type' => 'User', 'id' => 5}, {'type' => 'Group', 'id' => 42}]
+      expect(p).to receive(:user_recipient_ids=).with([5])
+      expect(p).to receive(:group_recipient_ids=).with([42])
+      p.recipient_ids = [{'type' => 'User', 'id' => 5}, {'type' => 'Group', 'id' => 42}]
     end
 
   end
 
-  describe '#serialized_receiver_ids' do
-    it 'calls #receiver_ids= with the deserialized param' do
+  describe '#serialized_recipient_ids' do
+    it 'calls #recipient_ids= with the deserialized param' do
       p = Post.new
-      expect(p).to receive(:receiver_ids=).with([{'type' => 'User', 'id' => 5}])
-      p.serialized_receiver_ids = '[{"type": "User", "id": 5}]'
+      expect(p).to receive(:recipient_ids=).with([{'type' => 'User', 'id' => 5}])
+      p.serialized_recipient_ids = '[{"type": "User", "id": 5}]'
     end
   end
 end

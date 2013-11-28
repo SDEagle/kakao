@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
-  has_many :addressings, as: :receiver, dependent: :destroy
+  has_many :addressings, as: :recipient, dependent: :destroy
   has_many :received_posts, through: :addressings
 end
