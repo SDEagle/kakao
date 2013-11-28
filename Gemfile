@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Until there we get to some design...
-gem 'bootstrap-sass', '~> 2.3.2'
+gem 'bootstrap-sass'
 
 gem 'jquery-rails'
 

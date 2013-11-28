@@ -1,5 +1,5 @@
-<%= link_to 'Kakao', root_path, :class => 'brand' %>
-<ul class="nav pull-right">
+<%= link_to 'Kakao', root_path, :class => 'navbar-brand' %>
+<ul class="nav navbar-nav pull-right">
   <% if user_signed_in? %>
       <li>
         <%= link_to current_user.name, current_user %>
