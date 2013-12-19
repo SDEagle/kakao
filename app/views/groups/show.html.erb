@@ -1,0 +1,24 @@
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<% if @group.parent_group %>
+  <p>
+    <strong>Parent group:</strong>
+    <%= link_to @group.parent_group, @group.parent_group.name %>
+  </p>
+<% end %>
+
+
+<p>
+  <strong>Sub Groups</strong>
+  <ul>
+    <% for child in @group.sub_groups %>
+      <li><%= link_to child, child.name %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

@@ -10,4 +10,8 @@ FactoryGirl.define do
     text 'Wer das in der willkürlichen, aber konventionellen Anordnung der Grapheme an erster Stelle stehende Zeichen artikuliert, verpflichtet sich dadurch stillschweigend zur subsequenziellen Artikulation des zweiten.'
     association :user
   end
+
+  factory :group do
+    sequence(:name) { |n| "Group-#{n}" }
+  end
 end

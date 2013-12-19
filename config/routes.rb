@@ -1,4 +1,6 @@
 Kakao::Application.routes.draw do
+  resources :groups
+
   resources :posts, except: [:edit, :update]
 
   devise_for :users
